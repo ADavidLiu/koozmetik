@@ -1,0 +1,269 @@
+.hero {
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem;
+    position: relative;
+    @include atSmall {
+        padding-top: 30.625rem;
+    }
+
+    &__actions-wrapper {
+        transform: translateY(6.333rem);
+        position: relative;
+        z-index: 1;
+        @include atSmall {
+            margin-bottom: 2rem;
+        }
+        @include atHuge {
+            width: 100vw !important;
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 6.25rem;
+        }
+
+        &--full {
+            transform: none;
+            margin-top: 2rem;
+            @include atSmall {
+                margin-bottom: 5rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+            @include atExtralarge {
+                padding: 0 5.625rem;
+            }
+            .hero__actions {
+                @include atSmall {
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include atHuge {
+            align-items: flex-end;
+            flex-wrap: nowrap;
+        }
+
+        & > * {
+            @include atSmall {
+                flex: 1;
+            }
+
+            &:last-child {
+                @include atSmall {
+                    text-align: right;
+                    justify-content: flex-end;
+                }
+            }
+
+            &:first-child {
+                @include atSmall {
+                    text-align: left;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+
+    &__social {
+        @include atSmall {
+            order: 1;
+        }
+
+        &-label {
+            transform: rotate(-90deg) translate(-4.333rem, -1rem);
+            @include atSmall {
+                transform: rotate(-90deg) translate(-3.5rem, -.5rem);
+            }
+        }
+
+        &--vertical {
+            position: absolute;
+            z-index: 1;
+            left: 15px;
+            top: 12rem;
+            @include atSmall {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include atExtralarge {
+                padding: 0 0 0 4.6875rem;
+            }
+        }
+    }
+
+    &__scroll {
+        text-align: center;
+        order: 3;
+        flex: 1 1 100%;
+        margin-top: 1.333rem;
+        animation: bounceVertical 2s infinite ease-out;
+        pointer-events: none;
+        @include atSmall {
+            margin-top: 0;
+            flex: 0 1 auto;
+            order: 2;
+        }
+    }
+
+    &__language-switch {
+        @include atSmall {
+            order: 3;
+        }
+    }
+
+    &__card {
+        transform: translateY(8.333rem);
+        position: relative;
+        z-index: 1;
+        @include atSmall {
+            transform: translateY(6.25rem);
+        }
+    }
+
+    &__slider {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &-dots {
+            position: absolute;
+            z-index: 1;
+            top: 38.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            @include atSmall {
+                transform: none;
+                top: 35%;
+                left: 9%;
+            }
+            @include atMedium {
+                top: 35.5%;
+                left: 15%;
+            }
+            @include atLarge {
+                top: 35%;
+                left: 12.5rem;
+            }
+        }
+
+        & + .hero__actions-wrapper {
+            position: absolute;
+            bottom: 4rem;
+            left: 0;
+            width: 100%;
+            @include atSmall {
+                bottom: 0;
+            }
+        }
+    }
+
+    &__slide {
+        padding-top: 12rem;
+        padding-bottom: 12.5rem;
+        position: relative;
+        @include atSmall {
+            padding-top: 21.875rem;
+            padding-bottom: 12.5rem;
+        }
+
+        &-img {
+            pointer-events: none;
+            margin-top: -8rem;
+            margin-bottom: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
+            @include atSmall {
+                max-width: none;
+                margin-top: 0;
+                margin-bottom: 0;
+                position: absolute;
+                bottom: 10.5rem;
+                right: 0;
+                width: 40%;
+            }
+            @include atMedium {
+                bottom: 10rem;
+            }
+            @include atExtralarge {
+                width: 50%;
+                bottom: 8rem;
+            }
+            @include atHuge {
+                width: 60%;
+                max-width: 960px;
+                bottom: 7rem;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--bg {
+        .hero__actions {
+            @include atHuge {
+                padding: 0 5.625rem;
+                height: 13.4375rem;
+                padding-bottom: 5.3125rem;
+                background-image: linear-gradient(to top, rgba($color-white, .25), rgba($color-white, 0));
+            }
+        }
+    }
+
+    &--content {
+        padding-top: 12rem;
+        padding-bottom: 4rem;
+        @include atSmall {
+            padding-top: 21.875rem;
+            padding-bottom: 12.5rem;
+        }
+
+        .hero__actions {
+            @include atHuge {
+                background-image: none;
+                height: auto;
+                padding: 0;
+            }
+        }
+    }
+
+    &--divided {
+        overflow: hidden;
+
+        &:after {
+            @include atSmall {
+                content: "";
+                position: absolute;
+                background-color: $color-gray-lighter;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    &--slider {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

@@ -1,0 +1,86 @@
+html,
+body {
+    overflow-x: hidden;
+    font-size: 12px;
+    background-color: $color-primary;
+    @include atSmall {
+        font-size: 13px;
+    }
+    @include atMedium {
+        font-size: 14px;
+    }
+    @include atLarge {
+        font-size: 15px;
+    }
+    @include atExtralarge {
+        font-size: 16px;
+    }
+}
+
+main,
+section {
+    background-color: $color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul,
+ol,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    @include linkStates(inherit, none);
+}
+
+h1 {
+    @extend .heading-primary;
+}
+
+h2 {
+    @extend .heading-secondary;
+}
+
+h3 {
+    @extend .heading-tertiary;
+}
+
+p {
+    @extend .paragraph;
+}
+
+
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+input,
+button {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-black;
+}

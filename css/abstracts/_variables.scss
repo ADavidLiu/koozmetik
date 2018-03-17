@@ -1,0 +1,22 @@
+// Colors
+$color-primary: #efd8d4;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-gray: #949494;
+$color-gray-light: #e1e1e1;
+$color-gray-lighter: #ededed;
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700');
+
+@font-face {
+    font-family: "Brown-Bold";
+    src: url("../fonts/Brown-Bold.ttf");
+    font-weight: bold;
+}
+
+$font-main: "Lora", "Georgia", "Times New Roman", serif;
+$font-accent: "Brown-Bold", "Helvetica", "Arial", sans-serif;

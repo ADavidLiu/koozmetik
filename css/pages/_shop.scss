@@ -1,0 +1,55 @@
+.shop {
+    &__filters {
+        text-align: center;
+        margin-bottom: 5.3125rem;
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-item {
+            color: $color-gray;
+            display: inline-block;
+            margin: .5rem 1rem;
+            cursor: pointer;
+            transition: all .25s;
+
+            &:hover {
+                color: $color-black;
+            }
+
+            & + & {
+                @include atSmall {
+                    margin: 0 0 0 2.1875rem;
+                }
+            }
+
+            &--active {
+                color: $color-black;
+            }
+        }
+    }
+
+    &__products {
+        &-group {
+            border-top: 1px solid $color-gray-light;
+            @include atSmall {
+                display: flex;
+                align-items: stretch;
+                justify-content: space-between;
+            }
+
+            & + & {
+                margin-top: 4.167rem;
+                @include atSmall {
+                    margin-top: 3.125rem;
+                }
+            }
+
+            &--single {
+                border-top: 0;
+            }
+        }
+    }
+}

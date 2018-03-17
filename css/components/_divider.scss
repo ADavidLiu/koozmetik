@@ -1,0 +1,14 @@
+.divider {
+    height: 1px;
+    width: 3.333rem;
+    background-color: $color-black;
+    margin-left: auto;
+    margin-right: auto;
+    @include atSmall {
+        width: 2.5rem;
+    }
+
+    &--left {
+        margin-left: 0;
+    }
+}

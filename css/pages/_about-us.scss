@@ -1,0 +1,33 @@
+.section-features {
+    padding: 16.667rem 0;
+    @include atSmall {
+        padding: 12.5rem 0;
+    }
+
+    &__item {
+        text-align: center;
+
+        & + & {
+            margin-top: 4.375rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.section-copy {
+    padding: 8.333rem 0;
+    @include atSmall {
+        padding: 6.25rem 0;
+    }
+
+    & [class ^= "col-"] {
+        & + [class ^= "col-"] {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+    }
+}

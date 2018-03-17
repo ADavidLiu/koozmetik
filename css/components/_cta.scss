@@ -1,0 +1,45 @@
+.cta {
+    font-family: $font-accent;
+    color: $color-black;
+    font-size: 2rem;
+    line-height: 2.333rem;
+    position: relative;
+    @include linkStates($color-black, none);
+    @include atSmall {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1.5rem;
+        @include atSmall {
+            width: 1.125rem;
+            height: 1.125rem;
+            margin-right: 1.125rem;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        background-color: $color-black;
+        width: 100%;
+        height: 3px;
+        transform-origin: 0% 50%;
+        transform: scaleX(0);
+        transition: all .25s;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+    }
+}

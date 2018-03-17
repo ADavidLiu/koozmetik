@@ -1,0 +1,108 @@
+.banner {
+    height: 50rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include atSmall {
+        display: flex;
+    }
+
+    &__content {
+        background-color: $color-white;
+        min-height: 44.167rem;
+        width: 100%;
+        padding: 2rem 1.333rem 3.333rem 1.333rem;
+        text-align: center;
+        @include atSmall {
+            text-align: left;
+            min-height: 33.125rem;
+            width: 80%;
+            max-width: 1060px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        @include atHuge {
+            width: 55%;
+            max-width: 1060px;
+        }
+
+        &-column {
+            & + & {
+                margin-top: 3.333rem;
+                @include atSmall {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__divided {
+        &-side {
+            padding: 0;
+            
+            &:first-child {
+                padding-bottom: 4.167rem;
+                @include atSmall {
+                    padding-bottom: 0;
+                    padding-right: 3.125rem;
+                }
+            }
+    
+            &:last-child {
+                @include atSmall {
+                    padding-left: 6.25rem;
+                }
+            }
+        }
+    }
+
+    &__product {
+        text-align: center;
+        @include atSmall {
+            text-align: right;
+        }
+    }
+
+    &--content {
+        padding: 0 15px;
+        @include atSmall {
+            padding: 0;
+        }
+    }
+
+    &--top {
+        align-items: flex-start;
+
+        .banner__card {
+            transform: translateY(-8.333rem);
+            @include atSmall {
+                transform: translateY(-6.25rem);
+            }
+        }
+    }
+    
+    &--bottom {
+        align-items: flex-end;
+
+        .banner__card {
+            transform: translateY(8.333rem);
+            @include atSmall {
+                transform: translateY(6.25rem);
+            }
+        }
+
+        & + * {
+            padding-top: 16.667rem !important;
+            @include atSmall {
+                padding-top: 12.5rem !important;
+            }
+        }
+    }
+
+    &--inner {
+        height: auto;
+        display: block;
+    }
+}

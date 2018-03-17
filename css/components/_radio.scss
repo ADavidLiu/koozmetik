@@ -1,0 +1,63 @@
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__group {
+        & + & {
+            margin-left: 1.667rem;
+            @include atSmall {
+                margin-left: 1.25rem;
+            }
+        }
+    }
+
+    &__label {
+        margin-bottom: 0;
+        padding-left: 0 !important;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @extend .paragraph;
+    }
+
+    &__mark {
+        display: block;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        border: 1px solid $color-black;
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-black;
+            border-radius: 50%;
+            height: 50%;
+            width: 50%;
+            opacity: 0;
+            transition: all .25s;
+        }
+    }
+
+    &__input {
+        &:checked {
+            & + .radio {
+                &__label {
+                    .radio__mark {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.feature-box {
+    text-align: center;
+
+    &__icon {
+        height: 3.75rem;
+        width: auto;
+    }
+
+    &__title {
+        margin-top: 3.333rem;
+        @include atSmall {
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__divider {
+        margin-top: 1.667rem;
+        margin-bottom: 1.667rem;
+        @include atSmall {
+            margin-top: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+}

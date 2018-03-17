@@ -1,0 +1,10 @@
+.section-read {
+    &__column {
+        & + & {
+            margin-top: 4rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.total {
+    width: 100%;
+    @include atSmall {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        margin-top: 1.5rem;
+        width: 100%;
+        @include atSmall {
+            width: 13.4375rem;
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.header {
+    position: absolute;
+    z-index: 1;
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+    @include atSmall {
+        top: 6.25rem;
+    }
+    @include atExtralarge {
+        padding: 0 4.6875rem;
+    }
+
+    &__content {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &-mark {
+            margin: 0 0 10px 8px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 370px;
+        @include atSmall {
+            margin: 0;
+            width: 50%;
+            max-width: 460px;
+        }
+    }
+
+    &__btns {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include atSmall {
+            justify-content: flex-end;
+            margin-top: 0;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        width: 2.667rem;
+        @include atSmall {
+            width: 2rem;
+            margin-left: 2.5rem;
+        }
+    }
+
+    &--static {
+        position: static;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        background-color: $color-white;
+        @include atSmall {
+            padding-top: 6.25rem;
+            padding-bottom: 6.25rem;
+        }
+    }
+}

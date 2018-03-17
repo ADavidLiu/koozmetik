@@ -1,0 +1,33 @@
+.menu {
+    &__item {
+        color: $color-gray;
+        font-family: $font-accent;
+        font-size: 2.625rem;
+        line-height: 3.125rem;
+        position: relative;
+        transition: all .25s;
+
+        & + & {
+            padding-top: 1.25rem;
+            margin-top: 1.25rem;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 1px;
+                width: 2.5rem;
+                background-color: $color-black;
+            }
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+
+        &--active {
+            color: $color-black;
+        }
+    }
+}

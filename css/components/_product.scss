@@ -1,0 +1,37 @@
+.product {
+    @include atSmall {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__description {
+        position: relative;
+        z-index: 1;
+        margin-top: 4rem;
+        @include atSmall {
+            margin-top: 0;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -4rem;
+            left: -15px;
+            height: calc(100% + 100rem);
+            width: calc(100% + 30px);
+            background-color: $color-gray-lighter;
+            @include atSmall {
+                display: none;
+            }
+        }
+    }
+
+    &__total {
+        margin-top: 3.333rem;
+        @include atSmall {
+            margin-top: 2.5rem;
+        }
+    }
+}

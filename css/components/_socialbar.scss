@@ -1,0 +1,94 @@
+.socialbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        & + & {
+            margin-left: 1.25rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 3rem;
+        border: 1px solid $color-black;
+        border-radius: 50%;
+        transition: all .25s;
+        @include linkStates($color-black, none);
+
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+        }
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        color: inherit;
+    }
+
+    &--small {
+        .socialbar {
+            &__link {
+                width: 3rem;
+                height: 3rem;
+                @include atSmall {
+                    width: 2.25rem;
+                    height: 2.25rem;
+                }
+            }
+
+            &__icon {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    &--white {
+        .socialbar {
+            &__link {
+                border-color: $color-white;
+                @include linkStates($color-white, none);
+
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    &--vertical {
+        display: block;
+
+        .socialbar {
+            &__item {
+                & + .socialbar__item {
+                    margin-top: 1.25rem;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &--vertical-sm {
+        @include atSmall {
+            display: block;
+        }
+
+        .socialbar {
+            &__item {
+                & + .socialbar__item {
+                    @include atSmall {
+                        margin-top: 1.25rem;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

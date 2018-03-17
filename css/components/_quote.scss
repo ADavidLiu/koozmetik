@@ -1,0 +1,21 @@
+.quote {
+    background-color: $color-primary;
+    padding: 4.0625rem 15px;
+    text-align: center;
+    border: 0;
+    margin: 0;
+
+    &__logo {
+        width: 1.5rem;
+        margin-bottom: 3.125rem;
+        @include atSmall {
+            width: 1.125rem;
+        }
+    }
+
+    &__text {
+        font-family: $font-main;
+        font-style: italic;
+        line-height: 1.5;
+    }
+}

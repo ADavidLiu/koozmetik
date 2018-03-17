@@ -1,0 +1,53 @@
+.sidebar {
+    overflow-y: auto;
+    position: fixed;
+    z-index: 2;
+    background-color: $color-white;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 90%;
+    padding: 2.75rem;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all .25s;
+    @include atSmall {
+        width: 70%;
+        max-width: 760px;
+        padding: 6.5rem 7.8125rem;
+    }
+
+    &__header {
+        margin-bottom: 7.8125rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        max-width: 180px;
+    }
+
+    &__close {
+        max-width: 25px;
+        cursor: pointer;
+    }
+    
+    &__footer,
+    &__total {
+        @include atSmall {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+    }
+
+    &__total {
+        width: 100%;
+    }
+
+    &--active {
+        opacity: 1;
+        transform: none;
+    }
+}

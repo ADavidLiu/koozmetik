@@ -1,0 +1,70 @@
+.news-list {
+    &__item {
+        display: block;
+        @include atSmall {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &-header,
+        &-content {
+            padding-top: 2.5rem;
+            padding-left: 2.5rem;
+            border-left: 1px solid $color-gray-light;
+            @include atSmall {
+                border-left: 0;
+                border-top: 1px solid $color-gray-light;
+                padding-left: 0;
+                padding-top: 1.875rem;
+            }
+        }
+
+        &-header {
+            position: relative;
+            padding-top: 0;
+            padding-bottom: 1.875rem;
+            @include atSmall {
+                padding-top: 1.875rem;
+                padding-bottom: 0;
+                flex: 1 0 20%;
+                max-width: 100px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 50%;
+                height: 1px;
+                background-color: $color-gray-light;
+                @include atSmall {
+                    width: 1px;
+                    height: 100%;
+                    bottom: auto;
+                    top: 0;
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+
+        &-content {
+            @include atSmall {
+                padding-left: 1.875rem;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 2.5rem;
+            }
+        }
+    }
+}

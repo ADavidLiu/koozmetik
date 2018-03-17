@@ -1,0 +1,76 @@
+.heading-primary {
+    font-family: $font-accent;
+    font-size: 5.75rem;
+    line-height: 6.875rem;
+    color: $color-black;
+}
+
+.heading-secondary {
+    font-family: $font-accent;
+    font-size: 3.75rem;
+    line-height: 4.5rem;
+    color: $color-black;
+}
+
+.heading-tertiary {
+    font-family: $font-accent;
+    font-size: 2.667rem;
+    color: $color-black;
+    line-height: 3.167rem;
+    @include atSmall {
+        font-size: 2rem;
+        line-height: 2.25rem;
+    }
+
+    &--small {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        @include atSmall {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+    }
+}
+
+.paragraph {
+    font-family: $font-main;
+    font-size: 1.333rem;
+    line-height: 2.25rem;
+    color: $color-black;
+    @include atSmall {
+        font-size: 1rem;
+        line-height: 1.6875rem;
+    }
+
+    &--small {
+        font-size: 1.167rem;
+        @include atSmall {
+            font-size: 0.875rem;
+        }
+    }
+
+    &--med {
+        font-size: 1.5rem;
+        line-height: 2.75rem;
+        @include atSmall {
+            font-size: 1.125rem;
+            line-height: 2.0625rem;
+        }
+
+        &-2 {
+            font-size: 1.667rem;
+            @include atSmall {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &--big {
+        font-size: 2rem;
+        line-height: 2.333rem;
+        @include atSmall {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+        }
+    }
+}

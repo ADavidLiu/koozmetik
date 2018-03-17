@@ -1,0 +1,68 @@
+.card {
+    background-color: $color-primary;
+    @include atSmall {
+        height: 43.75rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 1.5rem;
+        @include atSmall {
+            width: 1.125rem;
+        }
+    }
+
+    &__side {
+        flex: 1 1 50%;
+
+        &--bg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 10rem;
+            @include atSmall {
+                height: auto;
+            }
+        }
+
+        &--copy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3.333rem;
+            text-align: center;
+            @include atSmall {
+                padding: 5.625rem;
+            }
+            @include atLarge {
+                padding: 5.625rem 7.5rem;
+            }
+        }
+    }
+
+    &--quote {
+        height: 48.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 2rem;
+        @include atSmall {
+            height: 36.5625rem;
+            padding: 0 1.5rem;
+        }
+    }
+
+    &--small {
+        @include atSmall {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+        }
+    }
+}

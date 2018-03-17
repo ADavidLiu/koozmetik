@@ -1,0 +1,26 @@
+.section-locations {
+    padding-top: 8.333rem;
+    text-align: center;
+    @include atSmall {
+        text-align: left;
+        padding-top: 6.25rem;
+    }
+
+    &__group {
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 6.25rem;
+            }
+        }
+    }
+
+    &__item {
+        & + & {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 0;
+            }
+        }
+    }
+}

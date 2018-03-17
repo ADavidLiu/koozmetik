@@ -1,0 +1,92 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &__header {
+        margin-bottom: 4.375rem !important;
+    }
+
+    &__list {
+        margin: 0 0 auto 0;
+        padding-bottom: 4.375rem;
+    }
+
+    &__product {
+        padding: 2.1875rem 10px;
+        border-top: 1px solid $color-gray-light;
+        
+        &-content {
+            position: relative;
+            @include atSmall {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        &-img-wrapper {
+            width: 4.0625rem;
+            text-align: center;
+            margin: 0 auto 2rem auto;
+            @include atSmall {
+                margin: 0 2rem 0 0;
+            }
+        }
+
+        &-info {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        &-info-group {
+            flex: 1 0 33.33%;
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+
+        &-remove {
+            position: absolute;
+            top: 0;
+            right: -10px;
+            cursor: pointer;
+            width: 1.167rem;
+            height: 1.167rem;
+            @include atSmall {
+                width: 0.875rem;
+                height: 0.875rem;
+            }
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $color-gray-light;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: 1.5rem;
+        @include atSmall {
+            order: 1;
+            margin-top: 0;
+            width: inherit;
+            width: 13.4375rem;
+        }
+    }
+
+    &__total {
+        @include atSmall {
+            order: 2;
+            align-self: center;
+        }
+    }
+}

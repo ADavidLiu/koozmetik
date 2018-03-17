@@ -1,0 +1,29 @@
+.btn {
+    height: 5rem;
+    width: 17.9167rem;
+    background-color: $color-black;
+    border: 2px solid $color-black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    border-radius: 0;
+    font-family: $font-accent;
+    font-size: 2.5rem;
+    transition: all .25s;
+    @include atSmall {
+        height: 3.75rem;
+        width: 13.4375rem;
+        font-size: 1.875rem;
+    }
+
+    &:hover {
+        color: $color-black;
+        background-color: transparent;
+    }
+
+    &:active,
+    &:focus {
+        outline: none !important;
+    }
+}

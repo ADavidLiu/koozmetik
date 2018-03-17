@@ -1,0 +1,61 @@
+.tabs {
+    text-align: left;
+
+    &__controls {
+        margin-bottom: 1.667rem;
+        @include atSmall {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__control {
+        display: inline-block;
+        margin: .5rem 2.9167rem .5rem 0;
+        cursor: pointer;
+        position: relative;
+        @include atSmall {
+            margin-right: 2.1875rem;
+        }
+        @include atLarge {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 4px;
+            width: 100%;
+            background-color: $color-black;
+            transition: all .25s;
+            transform-origin: 0% 50%;
+            transform: scaleX(0);
+            opacity: 0;
+        }
+
+        &:hover,
+        &--active {
+            &:after {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+
+    &__content {
+        &-item {
+            &:not(.tabs__content-item--active) {
+                display: none;
+            }
+
+            p + p {
+                margin-top: 2.5rem;
+                @include atSmall {
+                    margin-top: 1.875rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.featured-article {
+    background-color: $color-gray-lighter;
+    padding: 3.125rem 2.5rem 4.375rem 2.5rem;
+    display: block;
+    @include atSmall {
+        padding: 3.125rem 6.25rem 4.375rem 6.25rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,12 @@
+.nav {
+    &__menu {
+        margin-bottom: 6.25rem;
+    }
+
+    &__language-switch {
+        margin-top: 1.333rem;
+        @include atSmall {
+            margin-top: 0;
+        }
+    }
+}

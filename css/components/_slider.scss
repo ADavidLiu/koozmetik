@@ -1,0 +1,143 @@
+.slider {
+    &--full {
+        position: relative;
+
+        .slick {
+            &-list {
+                margin: 0 -1rem;
+                @include atSmall {
+                    margin: 0 -3.125rem;
+                }
+            }
+    
+            &-slide {
+                margin: 0 1rem;
+                opacity: .5;
+                transition: all .25s !important;
+                @include atSmall {
+                    margin: 0 3.125rem;
+                    max-width: 595px;
+                    height: 335px;
+                }
+                @include atMedium {
+                    max-width: 778px;
+                    height: 438px;
+                }
+                @include atLarge {
+                    max-width: 800px;
+                    height: 450px;
+                }
+    
+                &:focus {
+                    outline: none;
+                }
+    
+                &.slick-current {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .slider {
+            &__controls {
+                position: absolute;
+                bottom: -1.875rem;
+                left: 50%;
+                transform: translate(-50%, 100%);
+            }
+
+            &__arrows {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                transform: translateY(-50%);
+            }
+
+            &__arrow {
+                width: 3.333rem;
+                cursor: pointer;
+                @include atSmall {
+                    width: 2.5rem;
+                }
+
+                &--prev,
+                &--next {
+                    position: absolute;
+                    top: 50%;
+                    transition: all .25s;
+                }
+
+                &--prev {
+                    left: 2rem;
+                    @include atSmall {
+                        left: 3.125rem;
+                    }
+
+                    &:hover {
+                        left: 1.5rem;
+                        @include atSmall {
+                            left: 2.75rem;
+                        }
+                    }
+                }
+
+                &--next {
+                    right: 2rem;
+                    transform: scaleX(-1);
+                    @include atSmall {
+                        right: 3.125rem;
+                    }
+
+                    &:hover {
+                        right: 1.5rem;
+                        @include atSmall {
+                            right: 2.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slick {
+        &-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                cursor: pointer;
+                position: relative;
+                transition: all .25s;
+
+                & + li {
+                    margin-left: 1.25rem;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -.65rem;
+                    height: 1px;
+                    width: 3.125rem;
+                    background-color: $color-black;
+                    transform-origin: 0% 50%;
+                    transform: scaleX(0);
+                    transition: all .25s;
+                }
+
+                &.slick-active {
+                    font-weight: 700;
+                    padding-right: 3.125rem;
+
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}

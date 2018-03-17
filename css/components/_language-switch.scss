@@ -1,0 +1,33 @@
+.language-switch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__line {
+        display: block;
+        width: 4.167rem;
+        height: 1px;
+        background-color: $color-black;
+        margin: 0 1.667rem;
+        @include atSmall {
+            width: 3.125rem;
+            margin: 0 1.25rem;
+        }
+    }
+
+    &__label {
+        font-family: $font-accent;
+        color: $color-gray;
+        @include linkStates($color-gray, none);
+        @extend .paragraph--big;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &--active {
+            color: $color-black;
+            @include linkStates($color-black, none);
+        }
+    }
+}

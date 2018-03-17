@@ -1,0 +1,35 @@
+.mark {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    background-color: $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include atSmall {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    &__icon {
+        width: 40%;
+
+        &--wide {
+            width: 60%;
+        }
+    }
+
+    &--small {
+        height: 2rem;
+        width: 2rem;
+        @include atSmall {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+
+    * {
+        text-transform: uppercase;
+        color: $color-white;
+    }
+}
