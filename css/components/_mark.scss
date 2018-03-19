@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 10px;
     @include atSmall {
         height: 2.25rem;
         width: 2.25rem;
@@ -13,6 +14,7 @@
 
     &__icon {
         width: 40%;
+        margin-bottom: 8px;
 
         &--wide {
             width: 60%;
@@ -22,6 +24,7 @@
     &--small {
         height: 2rem;
         width: 2rem;
+        padding-bottom: 5px;
         @include atSmall {
             height: 1.5rem;
             width: 1.5rem;
